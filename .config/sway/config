@@ -1,4 +1,4 @@
-# i3 config file
+# sway config file
 
 # Font
 font pango:Terminus medium 9px
@@ -79,12 +79,12 @@ bindsym Mod4+Shift+8 move container to workspace $ws8
 bindsym Mod4+Shift+9 move container to workspace $ws9
 bindsym Mod4+Shift+0 move container to workspace $ws10
 
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3 or config file)
-bindsym Mod4+Shift+r restart
+# restart sway inplace (preserves your layout/session, can be used to upgrade i3 or config file)
+bindsym Mod4+Shift+r reload
 # exit i3 (logs you out of your X session)
-bindsym Mod4+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym Mod4+Shift+e exec "swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your wayland session.' -b 'Yes, exit sway' 'swaymsg exit'"
 
-# Start i3bar to display a workspace bar (plus the system information i3status)
+# Start custom bar
 bar {
         status_command ~/.scripts/bar.sh
         colors {
