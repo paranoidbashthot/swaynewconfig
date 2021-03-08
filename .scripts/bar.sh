@@ -28,7 +28,7 @@ clock () {
 
 rootspace () {
     df -h | while read LINE; do
-            if [ "${LINE%%sdb3*}" = "/dev/" ]; then
+            if [ "${LINE%%nvme0n1p2*}" = "/dev/" ]; then
                 set -- $LINE
             printf "$4 free in $6"
                 break
