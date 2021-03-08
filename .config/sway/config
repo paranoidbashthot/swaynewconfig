@@ -79,9 +79,9 @@ bindsym Mod4+Shift+8 move container to workspace $ws8
 bindsym Mod4+Shift+9 move container to workspace $ws9
 bindsym Mod4+Shift+0 move container to workspace $ws10
 
-# restart sway inplace (preserves your layout/session, can be used to upgrade i3 or config file)
+# restart sway inplace (preserves your layout/session, can be used to upgrade sway or config file)
 bindsym Mod4+Shift+r reload
-# exit i3 (logs you out of your X session)
+# exit sway (logs you out of your X session)
 bindsym Mod4+Shift+e exec "swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your wayland session.' -b 'Yes, exit sway' 'swaymsg exit'"
 
 # Start custom bar
@@ -109,7 +109,7 @@ exec .scripts/startupscript.sh
 for_window [class="^.*"] border pixel 1
 
 #screenshots
-grim -g "$(slurp)" ~/screenshot.png
+bindsym Mod4+Shift+s grim -g "$(slurp)" ~/screenshot.png
 
 #stacking
 bindsym Mod4+s layout stacking
