@@ -1,7 +1,7 @@
 # sway config file
 
 # Font
-font pango:Terminus medium 9px
+font pango:Terminus medium 12px
 
 # Definitions
 # set $mod Mod4 # Mod4 is super or windows key or command Mod1 is alt or option
@@ -106,7 +106,7 @@ exec $term -c mainterm #make sure to use mainterm as your class to set only them
 exec .scripts/startupscript.sh
 
 # 1px border
-for_window [class="^.*"] border pixel 1
+default_border normal 1
 
 #screenshots
 bindsym Mod4+Shift+s grim -g "$(slurp)" ~/screenshot.png
