@@ -5,7 +5,7 @@ font pango:Terminus medium 12px
 
 # Definitions
 # set $mod Mod4 # Mod4 is super or windows key or command Mod1 is alt or option
-set $term st
+set $term xfce4-terminal
 
 set $ws1 "1"
 set $ws2 "2"
@@ -100,13 +100,13 @@ client.focused          #1D241D             #1D241D            #ffffff          
 client.focused_inactive #1D241D             #1D241D            #ffffff              #423638	#1D241D
 
 # execs
-output * background ~/bg.jpg fill
+output * background ~/bg.png fill
 exec $term -c mainterm #make sure to use mainterm as your class to set only them on a workspace
 exec $term -c mainterm #make sure to use mainterm as your class to set only them on a workspace
 exec .scripts/startupscript.sh
 
 # 1px border
-default_border normal 1
+default_border pixel 1
 
 #screenshots
 bindsym Mod4+Shift+s grim -g "$(slurp)" ~/screenshot.png
